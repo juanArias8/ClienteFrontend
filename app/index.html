@@ -2,45 +2,54 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Clientes-Yeoman</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body ng-app="clienteFrontendApp">
-        <div class="header">
-            <div class="navbar navbar-default" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#!/">clienteFrontend</a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="js-navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#!/">Inicio</a></li>
-                            <li class="active"><a href="#!customer-list/">Clientes</a></li>
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#!/">
+                        <img src="images/home.png" width="25px" height="25px">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" >
+                    <ul class="nav navbar-nav">
+                        <li><a href="#!/">Inicio</a></li>
+                        <li><a href="#!customer-list/">Clientes</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="buscar" ng-model="buscar">
+                            </div>
+                            <button type="submit" class="btn btn-default">Buscar</button>
+                        </form>
+                    </ul>
                 </div>
             </div>
+        </nav>
+
+        <div class="container " ng-view="">
+
         </div>
 
-        <div class="container text-center">
-            <div ng-view=""></div>
-        </div>
-
-        <div class="footer text-center text-info">
+        <footer class="footer text-center text-info">
             <div class="container">
                 <p><span class="glyphicon glyphicon-heart"></span>
-                <p>Arquitectura de software --- Laboratorio número 6 --- Semestre 2017-1</p>
+                <p>Universidad de Antioquia</p>
+                <p>Arquitectura de software --- 2017-1</p>
             </div>
-        </div>
+        </footer>
 
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
