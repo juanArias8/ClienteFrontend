@@ -2,52 +2,41 @@
     padding: 2%;
     background: rgba(0,0,0,0.08);
 }
-
 .containerList{
     height: 60vh;
     overflow: auto;
 }
-
 .btnReset{
     width: 50%;
     margin-left: 25%;
 }
-
 .btnEnviar{
     width: 50%;
     margin-left: 25%;
 }
-
 .btnReset:hover{
     width: 70%;
     margin-left: 15%;
 }
-
 .btnEnviar:hover{
     width: 70%;
     margin-left: 15%;
 }
-
 .btnEditar{
     width: 30%;
 }
-
 .btnEditar:hover{
     width: 40%;
 }
-
 .btnAgregar{
     width: 70%;
 }
-
 .btnAgregar:hover{
     width: 80%;
 }
-
 .btn1{
     width: 80%;
 }
-
 .btn1:hover{
     width: 100%;
 }
