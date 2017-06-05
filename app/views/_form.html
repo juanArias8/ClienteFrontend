@@ -1,0 +1,59 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+    <div class="form-group">
+        <label for="id" class="col-md-2 control-label">Id</label>
+        <div class="col-md-10">
+            <input type="number" ng-model="customer.id" class="form-control" id="id" placeholder="Ingrese un id" required min="1"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="nombre" class="col-md-2 control-label">Nombre</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="customer.nombre" class="form-control" id="nombre" placeholder="Ingrese el nombre" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-md-2  control-label">Email</label>
+        <div class="col-md-10">
+            <input type="email" ng-model="customer.email" class="form-control" id="email" placeholder="Ingrese el email" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="tel" class="col-md-2  control-label">Teléfono</label>
+        <div class="col-md-10">
+            <input type="tel" ng-model="customer.telefono" class="form-control" id="tel" placeholder="Ingrese el teléfono" required/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="dir" class="col-md-2  control-label">Dirección</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="customer.direccion" class="form-control" id="dir" placeholder="Ingrese la dirección" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="pais" class="col-md-2  control-label">País</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="customer.pais" class="form-control" id="pais" placeholder="Ingrese el país" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ciudad" class="col-md-2  control-label">Ciudad</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="customer.ciudad" class="form-control" id="ciudad" placeholder="Ingrese la ciudad" required/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+            <input type="reset" class="btn btn-primary btn-success btnReset"/>
+        </div>
+        <div class="col-md-5">
+            <input type="submit" class="btn btn-primary btnEnviar" value="Enviar"/>
+        </div>
+    </div> 
+</div>
+<div class="col-md-2"></div>
+
+

@@ -8,15 +8,46 @@
     overflow: auto;
 }
 
-.btn1:hover{
-    width: 90%;
+.btnReset{
+    width: 50%;
+    margin-left: 25%;
 }
 
-.btn2{
-    margin-left: 5%;
-    margin-right:  5%;
+.btnEnviar{
+    width: 50%;
+    margin-left: 25%;
 }
 
-.btn2:hover{
+.btnReset:hover{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.btnEnviar:hover{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.btnEditar{
+    width: 30%;
+}
+
+.btnEditar:hover{
     width: 40%;
+}
+
+.btnAgregar{
+    width: 70%;
+}
+
+.btnAgregar:hover{
+    width: 80%;
+}
+
+.btn1{
+    width: 80%;
+}
+
+.btn1:hover{
+    width: 100%;
 }

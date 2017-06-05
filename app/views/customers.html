@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h2 class="h2 text-center">Clientes registrados</h2>
+        <hr class="hr"/>
+        <div class="container-fluid containerList text-center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input type="text" class="form-control" ng-model="customerfilter" placeholder="Buscar cliente"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <a ui-sref="newCustomer" class="btn btn-success btnAgregar">Agregar cliente</a>
+            </div>
+            <table class="table table-hover">
+                <tbody  ng-repeat="customer in customers| filter:customerfilter | filter:buscar">
+                    <tr>
+                        <td>{{customer.nombre}}</td>
+                        <td>{{customer.email}}</td>
+                        <td class="text-center"><a  ui-sref="viewCustomer({id:customer.id})" class="btn btn-success btn1">Ver</a></td>
+                        <td class="text-center"><a  ng-click="deleteCustomer(customer)" class="btn btn-danger btn1">Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

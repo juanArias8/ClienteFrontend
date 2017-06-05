@@ -1,14 +1,12 @@
 <!doctype html>
-<html>
+<html data-ng-app="customerApp">
     <head>
         <meta charset="utf-8">
         <title>Clientes-Yeoman</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="styles/main.css">
     </head>
-    <body ng-app="clienteFrontendApp">
+    <body>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -18,14 +16,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#!/">
+                    <a class="navbar-brand" ui-sref="main">
                         <img src="images/home.png" width="25px" height="25px">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" >
                     <ul class="nav navbar-nav">
-                        <li><a href="#!/">Inicio</a></li>
-                        <li><a href="#!customer-list/">Clientes</a></li>
+                        <li><a ui-sref="main">Inicio</a></li>
+                        <li><a ui-sref="customers">Clientes</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <form class="navbar-form navbar-left">
@@ -39,7 +37,7 @@
             </div>
         </nav>
 
-        <div class="container " ng-view="">
+        <div class="container" ui-view >
 
         </div>
 
@@ -50,20 +48,13 @@
                 <p>Arquitectura de software --- 2017-1</p>
             </div>
         </footer>
-
-        <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-route/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
         <script src="scripts/app.js"></script>
-        <script src="scripts/services/customer-svc.js"></script>
+        <script src="scripts/services/services.js" type="text/javascript"></script>
+        <script src="scripts/controllers/controllers.js" type="text/javascript"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/customer-list.js"></script>
-        <script src="scripts/controllers/customer-detail.js"></script>
+
     </body>
 </html>

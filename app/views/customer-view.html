@@ -1,0 +1,38 @@
+<div class="col-md-2"></div>
+<div class="col-md-8 text-center">
+    <h3>Detalles para: {{customer.nombre}}</h3>
+    <hr class="hr"/>
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <td>{{customer.id}}</td>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>{{customer.nombre}}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{customer.email}}</td>
+        </tr>
+        <tr>
+            <th>Teléfono</th>
+            <td>{{customer.telefono}}</td>
+        </tr>
+        <tr>
+            <th>Dirección</th>
+            <td>{{customer.direccion}}</td>
+        </tr>
+        <tr>
+            <th>País</th>
+            <td>{{customer.pais}}</td>
+        </tr>
+        <tr>
+            <th>Ciudad</th>
+            <td>{{customer.ciudad}}</td>
+        </tr>
+    </table>
+    <hr class="hr"/>
+    <a class="btn btn-success btnEditar" ui-sref="editCustomer({id:customer.id})">Editar</a>
+</div>
+<div class="col-md-2"></div>

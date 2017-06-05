@@ -1,46 +1,30 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name clienteFrontendApp
- * @description
- * # clienteFrontendApp
- *
- * Main module of the application.
- */
-angular
-  .module('clienteFrontendApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'customerServices'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .when('/customer-list', {
-        templateUrl: 'views/customer-list.html',
-        controller: 'CustomerListCtrl',
-        controllerAs: 'customerList'
-      })
-      .when('/customer-detail', {
-        templateUrl: 'views/customer-detail.html',
-        controller: 'CustomerDetailCtrl',
-        controllerAs: 'customerDetail'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+angular.module('customerApp',['ui.router','ngResource','customerApp.controllers','customerApp.services']);
+
+angular.module('customerApp').config(function($stateProvider,$httpProvider){
+    $stateProvider
+    .state('main',{
+       url:'/main',
+       templateUrl:'views/main.html',
+       controller:'MainCtrl'
+    }).state('customers',{
+        url:'/customers',
+        templateUrl:'views/customers.html',
+        controller:'CustomerListController'
+    }).state('viewCustomer',{
+       url:'/customers/:id/view',
+       templateUrl:'views/customer-view.html',
+       controller:'CustomerViewController'
+    }).state('newCustomer',{
+        url:'/customers/new',
+        templateUrl:'views/customer-add.html',
+        controller:'CustomerCreateController'
+    }).state('editCustomer',{
+        url:'/customers/:id/edit',
+        templateUrl:'views/customer-edit.html',
+        controller:'CustomerEditController'
+    });
+}).run(function($state){
+   $state.go('main');
+});

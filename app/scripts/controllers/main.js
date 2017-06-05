@@ -1,5 +1,5 @@
 'use strict';
-angular.module('clienteFrontendApp')
+angular.module('customerApp.controllers')
         .controller('MainCtrl', function ($scope) {
             $scope.integrantes = [
                 {name: 'Juan David Arias'},
